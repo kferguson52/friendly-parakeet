@@ -73,9 +73,13 @@ function storeChoices() {
 
   if (passLength < 8 || passLength > 128) {
     alert("Try again. Needs to be between 8 to 128 in length");
+    // Recall function to force user to input correctly
+    storeChoices();
   }
   if (Number.isNaN(passLength)) {
     alert("Try again. Needs to be an actual numeric value and not text.");
+    // Same as above
+    storeChoices();
   }
 
   // This returns a number the user enters and makes sure of that with the validation
